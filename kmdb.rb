@@ -257,9 +257,10 @@ puts ""
 movies=Movie.all
 #puts movies.inspect
 for movie in movies 
-    puts movie.inspect
-    movies = Movie.find_by({"studio_id" => Warner_Bros["id"]})
-    puts " #{movie["title"]} - #{movie["year_released"]} - #{movie["rated"]} - #{movie["studio_id"]} "
+   # puts movie.inspect
+    moviestudio = Studio.find_by({"id" => movie["studio_id"]})
+    
+    puts " #{movie["title"]} - #{movie["year_released"]} - #{movie["rated"]} - #{moviestudio.name} "
 end
 
 # Prints a header for the cast output
