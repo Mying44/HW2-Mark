@@ -272,4 +272,11 @@ puts ""
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
+for role in roles 
+    # puts movie.inspect
+     cast = movie.find_by({"id" => movie["movie_id"]})
+     
+     puts " #{movie["title"]} - #{movie["year_released"]} - #{movie["rated"]} - #{moviestudio.name} "
+ end
+
 #from Roles and Find Actors / Movies - they are like studios
